@@ -1,3 +1,4 @@
+import javax.sound.midi.Soundbank;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -13,7 +14,8 @@ public class Main {
 
         while(true) {
             System.out.println("Employee App");
-            System.out.println("1 : Add Employee");
+            System.out.println("1 : Add Employee\n" +
+                    "2 : View Employee");
             opt = sc.nextInt();
 
             switch (opt) {
@@ -37,8 +39,23 @@ public class Main {
                     address = sc.next();
 
                     list.add(new Employee(id, name, designation, salary, comanyname, phonenumber, email, address));
+                    break;
 
+                case 2:
 
+                    System.out.println("Employee List");
+                    for(Employee e : list)
+                    {
+                        System.out.println("Employee Id :"+e.empcode);
+                        System.out.println("Employee Name :"+e.empname);
+                        System.out.println("Designataion :"+e.designation);
+                        System.out.println("Compnay Name"+e.companyname);
+                        System.out.println("Salary"+e.salary);
+                        System.out.println("Phone Nmber"+e.phonenumber);
+                        System.out.println("Email :"+e.email);
+                        System.out.println("Address :"+e.address);
+                    }
+                             break;
 
 
 
