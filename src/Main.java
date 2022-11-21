@@ -6,7 +6,7 @@ public class Main {
 
    static ArrayList<Employee> list=new ArrayList<Employee>();
     static  int id,salary,phonenumber;
-    static String name,designation,email,address;
+    static String name,designation,email,address,comanyname;
     static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
 
@@ -26,6 +26,9 @@ public class Main {
                     designation = sc.next();
                     System.out.println("enter the salary");
                     salary = sc.nextInt();
+                    System.out.println("enter the company name");
+                    comanyname = sc.next();
+
                     System.out.println("Enter the Phone number");
                     phonenumber = sc.nextInt();
                     System.out.println("enter the email");
@@ -33,7 +36,8 @@ public class Main {
                     System.out.println("enter the address");
                     address = sc.next();
 
-                    list.add(new Employee(id, name, designation, salary, phonenumber, email, address));
+                    list.add(new Employee(id, name, designation, salary, comanyname, phonenumber, email, address));
+
 
 
 
