@@ -1,9 +1,11 @@
 import javax.sound.midi.Soundbank;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class Main {
     static int opt;
+     static Employee w;
 
    static ArrayList<Employee> list=new ArrayList<Employee>();
     static  int id,salary,phonenumber;
@@ -16,7 +18,8 @@ public class Main {
             System.out.println("Employee App");
             System.out.println("1 : Add Employee\n" +
                     "2 : View Employee\n" +
-                    "3 : Search the employee");
+                    "3 : Search the employee\n" +
+                    "4 : Delete the employee");
             opt = sc.nextInt();
 
             switch (opt) {
@@ -78,6 +81,22 @@ public class Main {
                     }
                     break;
 
+                case 4:
+
+                    System.out.println("enter the id");
+                    int idd = sc.nextInt();
+
+
+                    for(Employee e : list)
+                    {
+                        if(idd == e.empcode)
+                        {
+                            w =e;
+
+                        }
+
+                    }
+                        list.remove(w);
 
 
             }
