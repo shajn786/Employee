@@ -19,8 +19,13 @@ public class Main {
             System.out.println("1 : Add Employee\n" +
                     "2 : View Employee\n" +
                     "3 : Search the employee\n" +
-                    "4 : Delete the employee");
+                    "4 : Delete the employee\n" +
+                    "enter 0 to exit");
             opt = sc.nextInt();
+            if(opt ==0 )
+            {
+                break;
+            }
 
             switch (opt) {
                 case 1:
@@ -97,6 +102,10 @@ public class Main {
 
                     }
                         list.remove(w);
+                    break;
+
+                default:
+                    System.out.println("enter options correctly");
 
 
             }
