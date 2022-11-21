@@ -15,7 +15,8 @@ public class Main {
         while(true) {
             System.out.println("Employee App");
             System.out.println("1 : Add Employee\n" +
-                    "2 : View Employee");
+                    "2 : View Employee\n" +
+                    "3 : Search the employee");
             opt = sc.nextInt();
 
             switch (opt) {
@@ -57,6 +58,25 @@ public class Main {
                     }
                              break;
 
+                case 3:
+
+                    System.out.println("enter the id");
+                    int id = sc.nextInt();
+
+                    for(Employee e : list)
+                    {
+                        if(id == e.empcode)
+                        {
+                            System.out.println("Employee Name :"+e.empname);
+                            System.out.println("Designataion :"+e.designation);
+                            System.out.println("Compnay Name"+e.companyname);
+                            System.out.println("Salary"+e.salary);
+                            System.out.println("Phone Nmber"+e.phonenumber);
+                            System.out.println("Email :"+e.email);
+                            System.out.println("Address :"+e.address);
+                        }
+                    }
+                    break;
 
 
 
